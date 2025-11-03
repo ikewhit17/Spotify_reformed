@@ -9,7 +9,7 @@
 <h1> Hello </h1>
 <p> This is a Spotify interface </p>
 
-
+<h1>Hello</h1>
 
 <script src = "script.js"> </script>
 </body>
