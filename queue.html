@@ -1,61 +1,125 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>MUSIC QUEUE</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Queue Page</title>
+
+    <style>
+        .container {
+            display: grid;
+            grid-template-rows: auto auto auto auto;
+            background-color: lightgray;
+            padding: 10px;
+            gap: 10px;
+        }
+
+        .container > div {
+            background-color: white;
+            border: 1px solid black;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .top-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+
+        .playlist-image {
+            width: 100%;
+            height: 150px;
+            background-color: gray;
+            margin-bottom: 10px;
+        }
+
+
+        .song-item {
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+            align-items: center;
+            border: 1px solid black;
+            padding: 10px;
+            background-color: white;
+            margin-bottom: 10px;
+        }
+
+        .song-item img {
+            width: 100%;
+            height: 50px;
+            background-color: lightgray;
+        }
+    </style>
+
 </head>
 <body>
-    <div>
-        <p>9:41</p>
+
+<div class="container">
+    <div class="top-buttons">
         <button>Song</button>
         <button>Video</button>
     </div>
+
     <div>
-        <div class="album-art" role="img" aria-label="Album artwork">[ Album Artwork ]</div>
+        <div class="playlist-image"></div>
+        <h2>Secret Playlist</h2>
     </div>
 
-    <!-- Playlist Section -->
+
     <div>
-        <p>Secret Playlist</p>
-        <hr>
-        <!-- Song Item 1 -->
-        <div>
-            <p>[Img] Song Title</p>
-            <p>Download</p>
-            <p>Play</p>
+        <h3>Queue</h3>
+
+        <div class="song-item">
+            <img src="" alt="Song Cover">
+            <p>Song Title</p>
+            <p>⋮</p>
         </div>
 
-        <!-- Song Item 2 -->
-        <div>
-            <p>[Img] Song Title</p>
-            <p>Download</p>
-            <p>More</p>
+        <div class="song-item">
+            <img src="" alt="Song Cover">
+            <p>Song Title</p>
+            <p>⋮</p>
         </div>
 
-        <!-- Song Item 3 -->
-        <div>
-            <p>[Img] Song Title</p>
-            <p>Download</p>
-            <p>More</p>
+        <div class="song-item">
+            <img src="" alt="Song Cover">
+            <p>Song Title</p>
+            <p>⋮</p>
         </div>
 
-        <!-- Song Item 4 -->
-        <div>
-            <p>[Img] Song Title</p>
-            <p>Download</p>
-            <p>More</p>
+        <div class="song-item">
+            <img src="" alt="Song Cover">
+            <p>Song Title 4</p>
+            <p>⋮</p>
         </div>
+
+        <div class="song-item">
+            <img src="" alt="Song Cover">
+            <p>Song Title 5</p>
+            <p>⋮</p>
+        </div>
+
+        <div class="song-item">
+            <img src="" alt="Song Cover">
+            <p>Song Title 6</p>
+            <p>⋮</p>
+        </div>
+
     </div>
 
-    <hr>
-
-    <!-- Bottom Controls -->
     <div>
-        <button>Shuffle</button>
-        <button>Repeat</button>
-        <button>Timer</button>
+        <p>Shuffle | Repeat | Timer</p>
     </div>
+
+</div>
 
 </body>
 </html>
+
+
+
+
+
 
