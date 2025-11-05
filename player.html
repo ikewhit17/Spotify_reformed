@@ -3,14 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MUSIC PLAYER</title>
+    
+<style>
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.container div {
+  
+  width: 100px;
+  margin: px;
+  padding: 10px;
+  text-align: center;  
+  font-size: 10px;
+}
+
+</style>
+
 </head>
 <body>
- <div style="text-align: center;">
-<button textalign="center">song</button>
-<button>video</button>
+    <!--Head button (song,video). Player can choose one of them-->
+   <div>
+        <p>9:41</p>
+        </div>
+<div class="container" style = "width: 100%; overflow: right";>
+  <div>  <button> down arrow here</button> </div>
+  <div> <button>Speaker here</button> </div>
+  <div> <p>Secret Playlist</p> </div>  
+  <div> <button>3 dots here</button> </div>
+</div>
+        <div>
+        <button>Song</button>
+        <button>Video</button>
+    </div>
+    <!--Top section (above album artwork)-->
+   <!--<div>
+        <button> down arrow here</button>
+        <button>Speaker here</button>
+        <p>Secret Playlist</p>
+        <button>3 dots here</button>
+    </div>--> 
+    <!--Middle section (album artwork, song title, artist name, review, save, share)-->
+    <div>
+        <p>[ Album Artwork ]</p>
+    </div>
+
+    <div>
+        <p>Song Title</p>
+        <p>Artist Name</p>
+    </div>
+
+    <div>
+        <button>Review</button>
+        <button>Save</button>
+        <button>Share</button>
+        <button> circle with check</button>
+    </div>
+    <!--music progress slider -->
+    <div>
+    <input type="range"> 
+    <p>0:00</p>
+        <p>3:21</p>
 </div>
 
+        <!--bottom section (functions for music player)-->
+    <div>
+        <button>shuffle</button>
+        <button>Previous</button>
+        <button>Play/Pause</button>
+        <button>Next</button>
+        <button>Repeat</button>
+        </div>
+
+        <div>
+            <button>connect button</button>
+            <p>Connect</p>
+
+            <button>queue button</button>
+            <p>Queue</p>
+        </div>
 </body>
 
 
