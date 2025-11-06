@@ -1,125 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify Queue Page</title>
-
+    <title>MUSIC QUEUE</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        .container {
-            display: grid;
-            grid-template-rows: auto auto auto auto;
-            background-color: lightgray;
+       .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .playlist-container {
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .song-item {
+            display: flex;
+            align-items: center;
             padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+            background-color: #f8f8f8;
+            transition: background-color 0.3s;
+        }
+
+        .song-item:hover {
+            background-color: #eeeeee;
+        }
+
+        .song-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 5px;
+            margin-right: 15px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .song-details {
+            flex-grow: 1;
+        }
+
+        .song-actions {
+            display: flex;
             gap: 10px;
         }
 
-        .container > div {
-            background-color: white;
-            border: 1px solid black;
-            padding: 15px;
-            text-align: center;
-        }
-
-        .top-buttons {
+        .controls {
             display: flex;
             justify-content: center;
             gap: 20px;
-        }
-
-
-        .playlist-image {
-            width: 100%;
-            height: 150px;
-            background-color: gray;
-            margin-bottom: 10px;
-        }
-
-
-        .song-item {
-            display: grid;
-            grid-template-columns: 20% 60% 20%;
-            align-items: center;
-            border: 1px solid black;
-            padding: 10px;
-            background-color: white;
-            margin-bottom: 10px;
-        }
-
-        .song-item img {
-            width: 100%;
-            height: 50px;
-            background-color: lightgray;
-        }
+            padding: 20px 0;
+        }   
     </style>
-
 </head>
-<body>
 
-<div class="container">
-    <div class="top-buttons">
+<body>
+    <div class = "container">
+        <p>9:41</p>
         <button>Song</button>
         <button>Video</button>
     </div>
-
     <div>
-        <div class="playlist-image"></div>
-        <h2>Secret Playlist</h2>
+        <p>[ Album Artwork ]</p>
     </div>
 
-
+    <!-- Playlist Section -->
     <div>
-        <h3>Queue</h3>
-
-        <div class="song-item">
-            <img src="" alt="Song Cover">
-            <p>Song Title</p>
-            <p>⋮</p>
+        <p>Secret Playlist</p>
+        <hr>
+        <!-- Song Item 1 -->
+        <div>
+            <p>[Img] Song Title</p>
+            <p>Download</p>
+            <p>Play</p>
         </div>
 
-        <div class="song-item">
-            <img src="" alt="Song Cover">
-            <p>Song Title</p>
-            <p>⋮</p>
+        <!-- Song Item 2 -->
+        <div>
+            <p>[Img] Song Title</p>
+            <p>Download</p>
+            <p>More</p>
         </div>
 
-        <div class="song-item">
-            <img src="" alt="Song Cover">
-            <p>Song Title</p>
-            <p>⋮</p>
+        <!-- Song Item 3 -->
+        <div>
+            <p>[Img] Song Title</p>
+            <p>Download</p>
+            <p>More</p>
         </div>
 
-        <div class="song-item">
-            <img src="" alt="Song Cover">
-            <p>Song Title 4</p>
-            <p>⋮</p>
+        <!-- Song Item 4 -->
+        <div>
+            <p>[Img] Song Title</p>
+            <p>Download</p>
+            <p>More</p>
         </div>
-
-        <div class="song-item">
-            <img src="" alt="Song Cover">
-            <p>Song Title 5</p>
-            <p>⋮</p>
-        </div>
-
-        <div class="song-item">
-            <img src="" alt="Song Cover">
-            <p>Song Title 6</p>
-            <p>⋮</p>
-        </div>
-
     </div>
 
-    <div>
-        <p>Shuffle | Repeat | Timer</p>
-    </div>
+    <hr>
 
+    <!-- Bottom Controls -->
+    <div>
+        <button>Shuffle</button>
+        <button>Repeat</button>
+        <button>Timer</button>
+    </div>
 </div>
-
 </body>
 </html>
-
-
-
-
-
 
