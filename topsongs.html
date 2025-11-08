@@ -4,43 +4,154 @@
     <title>Song Options</title>
     <link rel="stylesheet" href="style.css">
     <style>
-.container {
-  display: flex;
-  background-color: DodgerBlue;
+
+.bar{
+  display:flex;
+  padding: 20px;
+  font-weight:bold;
+  font-size:22px;
+  border-bottom:1px solid black;
 }
 
-.container div {
-  background-color: #f1f1f1;
-  margin: 10px;
-  padding: 20px;
-  font-size: 30px;
+.container{
+  padding:20px;
+  display:grid;;
 }
+
+.row{
+  display:flex;
+  width:100%;
+  gap: 30px;
+}
+
+.bottom{
+  background:lightgray;
+  padding:20px;
+  display:grid;
+  row-gap:15px;
+}
+
+.song{display:flex; 
+    gap: 15px;
+}
+
 </style>
 </head>
 <body>
-
-<h1> Top Songs</h1><br>
-
-<div class="container">
-  <div>Item 1</div>
-
+  <!-- Songs currently in the playlist-->
+  <div class="container">
+    <div style = "margin-left:auto;">
+      <div>
+        <a href="your landing page url">
+<img src = "Image" alt = "" width="40px" height="40px">
+</a>
+    </div>
+    </div>
+<div class="bar" style = "font-size: 30px;">Top Songs</div>
 </div>
 
-        <div class = "mycontainer">
-            <img src = "songimage.jpg"  width="100" height="100">
-        </div>
-                <div style="background-color:#FFF4A3;">
-                    <h3>Song Title</h3>
-                </div>
-                
-                    <div class = "mycontainer1">
-                    <h3>Artist Name</h3>
-                    </div>
-                 </div>
-        </div>
 
 
+  <div class="container">
+    <div class="row" style = "background-color: lightgray;">
+      <div>1</div>
+      <div>
+        <img src = "Image" alt = "" width="40px" height="40px">
+      </div>
+      <div>Song Title</div>
+      <div style = "margin-left:auto;">...</div>
+    </div>
+    <div class="row">
+      <div>2</div>
+      <div>
+        <img src = "Image" alt = "" width="40px" height="40px">
+      </div>
+      <div>Song Title</div>
+      <div style = "margin-left:auto;">...</div>
+    </div>
+    <div class="row">
+      <div>3</div>
+      <div>
+        <img src = "Image" alt = "" width="40px" height="40px">
+      </div>
+      <div>Song Title</div>
+      <div style = "margin-left:auto;">...</div>
+    </div>
+  </div>      
 
+<!-- This is the bottom part of the Song options page when you slide up -->
+  <div class="bottom">
+    <div class = "song">
+    <img src = "" alt = "" width="20px" height="20px">
+    <div>
+      <button type="button">Song title</button>
+    </div>
+    </div>
+    <br>
+
+    <div class = "song">
+         <!-- Makes images clickable, sends them to a specific webpage, link, etc. -->
+      <a href="your landing page url">
+ <img src="your image url" width = "20px" height = "20px">
+</a>
+<div>
+       <button type="button">Share</button>
+    </div>
+    </div>
+
+      <div class = "song">
+         <!-- Makes images clickable, sends them to a specific webpage, link, etc. -->
+      <a href="your landing page url">
+ <img src="your image url" width = "20px" height = "20px">
+</a>
+<div>
+       <button type="button">Add to liked Songs</button>
+    </div>
+    </div>
+    
+    <div class = "song">
+         <!-- Makes images clickable, sends them to a specific webpage, link, etc. -->
+      <a href="your landing page url">
+ <img src="your image url" width = "20px" height = "20px">
+</a>
+<div>
+       <button type="button">Add to Playlist</button>
+    </div>
+    </div>
+
+      <div class = "song">
+         <!-- Makes images clickable, sends them to a specific webpage, link, etc. -->
+      <a href="your landing page url">
+ <img src="your image url" width = "20px" height = "20px">
+</a>
+<div>
+       <button type="button">Add to Queue</button>
+    </div>
+    </div>
+
+ 
+      <div class = "song">
+         <!-- Makes images clickable, sends them to a specific webpage, link, etc. -->
+      <a href="your landing page url">
+ <img src="your image url" width = "20px" height = "20px">
+</a>
+<div>
+       <button type="button">Play Next</button>
+    </div>
+    </div>
+
+      <div class = "song">
+         <!-- Makes images clickable, sends them to a specific webpage, link, etc. -->
+      <a href="your landing page url">
+ <img src="your image url" width = "20px" height = "20px">
+</a>
+<div>
+       <button type="button">Start a Jam </button>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
 </body>
 <html>
 
