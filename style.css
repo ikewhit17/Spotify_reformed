@@ -5,15 +5,15 @@
     border-radius: 40px; 
     background-color: #000; 
     position: relative;
-    margin: 20px auto; /* Center on the page */
+    overflow: hidden;
+    margin: 20px auto; 
 }
-
 .screen {
-    width: calc(100% - 20px); /* Adjust for border */
-    height: calc(100% - 20px); /* Adjust for border */
-    background-color: #fff; /* Screen background */
-    margin: 10px; /* Spacing from phone body */
-    border-radius: 30px; /* Rounded screen corners */
+    width: calc(100% - 20px); 
+    height: calc(100% - 20px); 
+    background-color: white;
+    margin: 10px; 
+    border-radius: 30px; 
 
 }
 
