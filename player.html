@@ -24,7 +24,7 @@
 
 </head>
 <body>
-    <!--Head button (song,video). Player can choose one of them-->
+    <!-- Top Section (time, song/video toggle, playlist name, dropdown, speaker, more options) -->
    <div>
         <p>9:41</p>
         </div>
@@ -34,20 +34,15 @@
   <div> <p>Secret Playlist</p> </div>  
   <div> <button>3 dots here</button> </div>
 </div>
-        <div>
+        <div style="text-align: center;">
         <button>Song</button>
         <button>Video</button>
     </div>
-    <!--Top section (above album artwork)-->
-   <!--<div>
-        <button> down arrow here</button>
-        <button>Speaker here</button>
-        <p>Secret Playlist</p>
-        <button>3 dots here</button>
-    </div>--> 
+  
     <!--Middle section (album artwork, song title, artist name, review, save, share)-->
-    <div>
-        <p>[ Album Artwork ]</p>
+    <div style = "text-align: center;">
+<img src = "Image" alt = "" width="250" height="250px">
+</p>
     </div>
 
     <div>
@@ -55,21 +50,25 @@
         <p>Artist Name</p>
     </div>
 
-    <div>
+    <div style="display:flex; gap:8px;">
         <button>Review</button>
         <button>Save</button>
         <button>Share</button>
-        <button> circle with check</button>
+        <button style="margin-left:auto"> circle with check</button>
     </div>
+
+
     <!--music progress slider -->
-    <div>
-    <input type="range"> 
-    <p>0:00</p>
-        <p>3:21</p>
+<div style="width:100%;">
+  <input type="range" style="width:100%;">
+  <div>
+    <span>0:00</span>
+    <span style="float:right;">3:21</span>
+  </div>
 </div>
 
         <!--bottom section (functions for music player)-->
-    <div>
+    <div class="container" style = "width: 100%; overflow: right">
         <button>shuffle</button>
         <button>Previous</button>
         <button>Play/Pause</button>
@@ -77,12 +76,9 @@
         <button>Repeat</button>
         </div>
 
-        <div>
+        <div class="container" style = "width: 100%; overflow: right">
             <button>connect button</button>
-            <p>Connect</p>
-
-            <button>queue button</button>
-            <p>Queue</p>
+            <button style="margin-left:auto">queue button</button>
         </div>
 </body>
 
