@@ -1,61 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-      <link rel="stylesheet" href="style.css">
-
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
 .container{
-    display: grid;
-    grid-template-rows: auto, auto, auto, auto, auto, auto;
-    background-color: lightgray;
+  display: grid;
+  grid-template-rows: auto, auto, auto, auto, auto, auto, auto, auto;
+  background-color: lightgray;
 }
 .artist{
-    text-align: left;
-    border-bottom: 1px solid gray;
-    line-height:0px;
-    padding-bottom:10px;
-  }
-  
-  .buttons{
-    display: inline;
-    padding-left:10px;
-    font-size:12px;
-    padding-right:35px;
-  }
-    </style>
+  text-align: left;
+  border-bottom: 1px solid gray;
+  line-height:0px;
+  padding-bottom:10px;
+}
+.row{
+  display:flex;
+  width:90%;
+  background-color: lightgray;
+  border:1px solid black;
+  padding:10px;
+  align-items:center;
+}
+.song{
+  display:flex;
+  align-items:center;
+}
+</style>
 </head>
 <body>
-    <div class="phone-mockup">
-    <div class="screen">
-  <div class="container">
-  <div class="artist">
-    <img src="photos/G4djKxNXQAARbZy.jpg" alt="Artist Image" width=100% height="200px">
-    <h2 style="text-align:left">Post Malone</h2>
-  </div>
+<div class="phone-mockup">
+<div class="screen">
+<div class="container">
+<div class="artist">
+  <img src="photos/G4djKxNXQAARbZy.jpg" alt="Artist Image" width=100% height="200px">
+  <h2 style="text-align:left">Post Malone</h2>
+</div>
+<div>
   <div>
-    <div class="buttons">
-      <p style="display:inline">67M monthly listeners</p>
-    </div>
-    <div class="buttons">
-      <button style="justify-content:right; text-align:right">
+    <p style="display:inline; padding-left:5px; font-size:14px;">67M monthly listeners</p>
+      <div style="float:right; padding-right:10px;">
+        <button style="padding:5px">
           Follow
-      </button>
-      <button style="justify-content:right; width: 40px; height: 40px; background-color: green; color: white; border:none; border-radius: 100%;">&#9654</button>
+        </button>
+      <button style="width:35px; height:35px; background-color:green; color:white; border:none; border-radius:100%;">&#9654</button>
     </div>
-    </div style="display:inline;">
-  <div>
-    <p style="text-align:center;">
-      Music&nbsp;&nbsp;&nbsp; Clips&nbsp;&nbsp;&nbsp; Events&nbsp;&nbsp;&nbsp; Merch
-    </p>
-    
   </div>
-  <div>Popular Songs</div><br>
-  <div class="songs">5</div>
-  <div>6</div>
+</div>
+<div>
+  <p style="text-align:center;">
+    Music &nbsp; &nbsp; Clips &nbsp; &nbsp; Events &nbsp; &nbsp; Merch
+  </p>
+</div>
+<div style="padding-left:5px">Popular Songs
+  <form action="topsongs.html" method="get">
+  <button style="float:right; padding:5px; margin-right:10px">See All</button>
+  </form>
+    </div><br>
+        <div class="row">
+    <div class="song">
+      <img src="" width="40px" height="40px">
+      <div style="padding:10px">Song Title 1</div>
+    </div>
+    <div style="margin-left:auto;"></div>
   </div>
+  <div class="row">
+    <div class="song">
+      <img src="" width="40px" height="40px">
+      <div style="padding:10px">Song Title 2</div>
+    </div>
+    <div style="margin-left:auto;"></div>
   </div>
-</div>  
+  <div class="row">
+    <div class="song">
+      <img src="" width="40px" height="40px">
+      <div style="padding:10px">Song Title 3</div>
+    </div>
+    <div style="margin-left:auto;"></div>
+  </div><br>
+  <div style="text-align:center;"><p>Home &nbsp; &nbsp; Search &nbsp; &nbsp; Library &nbsp; &nbsp; Create</p></div>
+    </div>
+  </div>
+</div>
 </html>
