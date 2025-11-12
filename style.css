@@ -1,12 +1,13 @@
 .phone-mockup {
     width: 320px; 
     height: 660px; 
-    border: 10px solid #333;
+    border: 20 px solid #333;
     border-radius: 40px; 
     background-color: black; 
     position: relative;
     overflow: hidden;
     margin: 20px auto; 
+
 }
 .screen {
     width: calc(100% - 20px); 
@@ -15,8 +16,8 @@
     margin: 10px; 
     border-radius: 30px; 
      overflow: hidden;
-
-
+     /* Added Backtround-color for all screen */
+     background-color: lightgray;
 
 }
 
