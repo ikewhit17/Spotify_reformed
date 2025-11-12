@@ -10,6 +10,7 @@
 .container {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .container div {
@@ -21,7 +22,6 @@
   font-size: 10px;
   background-color: lightgray;
 }
-
 
 </style>
 
@@ -38,20 +38,19 @@
         <button>Song</button>
         <button>Video</button>
     </div>
-  
 
-<div class="container" style = "width: 100%; overflow: left">
-<div style= "width:10%; text-align:left;">
+<div class="container">
+<div style= "text-align:left;">
       <a href="your landing page url">
 <img src = "photos/Icons/Downarrow.png" alt = "DownarrowIcon" width="30px" height="30px">
 </a>
 </div>
-<div style= "width:5%; text-align:left;">
+<div style= "text-align:left>
             <a href="your landing page url">
 <img src = "photos/Icons/Speaker.png" alt = "SpeakerIcon" width="30px" height="30px">
 </a>
   </div>
-<div style="width:100%; text-align:center; font-size:12px"> 
+<div style="width:100%; text-align:center;font-size:12px"> 
   <p>Secret Playlist</p> </div>  
  <div style="width:%; text-align:right;"> 
             <a href="your landing page url">
@@ -64,11 +63,11 @@
   
     <!--Middle section (album artwork, song title, artist name, review, save, share)-->
     <div style = "text-align: center;">
-<img src = "Image" alt = "" width="250" height="250px">
+<img src = "photos/G4djKxNXQAARbZy.jpg" alt = "Albumcover" width="250" height="250px">
 </p>
     </div>
 
-    <div style="background-color: lightgray;">
+    <div style="background-color: lightgray;10px; text-align: left; margin-left:10px; ">
         <p>Song Title</p>
         <p>Artist Name</p>
     </div>
@@ -78,9 +77,23 @@
  <img src="photos/Icons/Rate.png" alt = "RateIcon" width = "40px" height = "40px">
 </a>
 </div>
-        <button>Save</button>
-        <button>Share</button>
-        <button style="margin-left:auto"> circle with check</button>
+
+<!--- save, share, checkmark icons -->
+<div style="position:fixed; left:">
+      <a href="your landing page url">
+ <img src="photos/Icons/Save.png" alt = "SaveIcon"width = "40px" height = "40px">
+</a>
+</div>
+<div style="text-align:left; margin-left:0%"> 
+      <a href="your landing page url">
+ <img src="photos/Icons/Share.png" alt = "ShareIcon"width = "40px" height = "40px">
+</a>
+</div>
+<div style="width:100%; text-align:right;"> 
+      <a href="your landing page url">
+ <img src="photos/Icons/Checkmark.png" alt = "CheckmarkIcon"width = "40px" height = "40px">
+</a>
+</div>
     </div>
 
     <!--music progress slider -->
@@ -93,7 +106,7 @@
 </div>
 
         <!--bottom section (functions for music player)-->
-    <div class="container" style = "width: 100%; overflow: center">
+    <div class="container" style = "width: 100%; text-align: center;">
       <div> 
             <a href="your landing page url">
 <img src = "photos/Icons/Shuffle.png" alt = "ShuffleIcon" width="40px" height="40px">
@@ -116,7 +129,7 @@
 </div>
 <div>
    <a href="your landing page url">
-<img src = "photos/Icons/Play(repeat).png" alt = "Play(repeat)Icon" height = "20" width = "20">
+<img src = "photos/Icons/Play(repeat).png" alt = "Play(repeat)Icon" height = "30" width = "30">
 </a>
 </div>
 </div>
@@ -138,10 +151,12 @@
 </html>
 
 
-
+<!---For reference
 
  <div>
       <a href="your landing page url">
  <img src="your image url" alt = ""width = "40px" height = "40px">
 </a>
-</div>
+</div> 
+
+--->
