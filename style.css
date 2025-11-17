@@ -16,7 +16,6 @@
     margin: 10px; 
     border-radius: 30px; 
      overflow: hidden;
-     background-color:
 
 }
 
@@ -31,3 +30,4 @@ button {
 button:hover {
   background: lightgray;
 }
+
