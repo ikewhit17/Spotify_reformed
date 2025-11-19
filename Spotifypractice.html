@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Song Card</title>
+
+  <style>
+    .song-card {
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .song-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .song-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .artist {
+      color: #555;
+      margin-bottom: 8px;
+    }
+
+    .label {
+      font-weight: bold;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div id="song-container"></div>
+
+  <script>
+
+    // ------------------------------
+    // STUDENTS EDIT THIS JSON OBJECT
+    // ------------------------------
+    const song = {
+      id: "myoldways001",
+      title: "My Old Ways",
+      artists: ["Tame Impala"],
+      album: {
+        name: "Deadbeat",
+        year: 2025,
+        cover: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/DeadbeatTameImpala.jpeg/250px-DeadbeatTameImpala.jpeg"
+      },
+      duration_seconds: 298,
+      explicit: false,
+      genre: "Electronic / House",
+      rating: 9,
+      track_number: 1
+    };
+
+
+
+    // ------------------------------
+    // HTML GENERATION CODE
+    // ------------------------------
+    // Create song card HTML
+    const cardHTML = `
+      <div class="song-card">
+        <img src="${song.album.cover}" alt="Album Cover">
+
+        <div class="song-title">${song.title}</div>
+
+        <div class="artist">
+          ${song.artists.join(", ")}
+        </div>
+
+        <div><span class="label">Album:</span> ${song.album.name} (${song.album.year})</div>
+        <div><span class="label">Duration:</span> ${song.duration_seconds}</div>
+
+        <!-- Example of using a custom field -->
+        <div><span class="label">Genre:</span> ${song.genre}</div>
+        <div><span class="label">Rating:</span> ${song.rating}</div>
+        <div><span class="label">Track:</span> ${song.track_number}</div>
+      </div>
+    `;
+
+    // Insert HTML into the page
+    document.getElementById("song-container").innerHTML = cardHTML;
+
+  </script>
+
+</body>
+
+</html>
