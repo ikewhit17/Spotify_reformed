@@ -1,4 +1,5 @@
-const song1 = {
+const songs = [
+    {
 
       id: "1N87W35XAC3",
       title: "Can You Feel It?",
@@ -15,9 +16,9 @@ const song1 = {
       explicit: false,
       genre: ["alternative", "indie"],
       rating: 3/5
-    };
+    },
 
-const song2 = {
+{
 id: "B9T11PZD",
 title: "Black Sun Relay",
 artists: ["Iron Solvent"],
@@ -27,9 +28,9 @@ duration_seconds: 261,
 explicit: true,
 genre: ["metal", "hard rock"],
 rating: 5/5
-};
+},
 
-const song3 = {
+{
 id: "C7U44LKM",
 title: "Midnight Satellite",
 artists: ["Rhea Linden"],
@@ -39,9 +40,9 @@ duration_seconds: 198,
 explicit: false,
 genre: ["pop", "synthpop"],
 rating: 3/5
-};
+},
 
-const song4 = {
+{
 id: "D5R02HSQ",
 title: "Concrete Wildfire",
 artists: ["The Rotations"],
@@ -51,9 +52,9 @@ duration_seconds: 175,
 explicit: true,
 genre: ["punk", "garage"],
 rating: 4/5
-};
+},
 
-const song5 = {
+{
 id: "E3M87QPA",
 title: "Cypress Valley",
 artists: ["Hollow Pines"],
@@ -63,9 +64,9 @@ duration_seconds: 244,
 explicit: false,
 genre: ["folk", "americana"],
 rating: 4/5
-};
+},
 
-const song6 = {
+{
 id: "F8S19WVV",
 title: "Vapor Cathedral",
 artists: ["Lucent Drift"],
@@ -75,9 +76,9 @@ duration_seconds: 227,
 explicit: false,
 genre: ["ambient", "electronic"],
 rating: 5/5
-};
+},
 
-const song7 = {
+{
 id: "G2K33BRF",
 title: "Signal Lantern",
 artists: ["Harper Vale"],
@@ -87,9 +88,9 @@ duration_seconds: 189,
 explicit: false,
 genre: ["country", "singer-songwriter"],
 rating: 3/5
-};
+},
 
-const song8 = {
+{
 id: "H6V72MND",
 title: "Crimson Paradox",
 artists: ["Violet Theory"],
@@ -99,9 +100,9 @@ duration_seconds: 232,
 explicit: true,
 genre: ["alt-rock", "post-grunge"],
 rating: 4/5
-};
+},
 
-const song9 = {
+{
 id: "J4C02TQL",
 title: "Bluewire District",
 artists: ["Metrophase"],
@@ -111,9 +112,9 @@ duration_seconds: 206,
 explicit: false,
 genre: ["edm", "house"],
 rating: 3/5
-};
+},
 
-const song10 = {
+{
 id: "K9P58YRW",
 title: "Memory Orchard",
 artists: ["Echo Plains"],
@@ -123,5 +124,6 @@ duration_seconds: 256,
 explicit: false,
 genre: ["lofi", "chillhop"],
 rating: 4/5
-};
+}
+];
 
