@@ -85,24 +85,29 @@
 <script src="script.js"></script>
 
 <script>
-function renderSongs() {
   const container = document.getElementById("song-container");
-  container.innerHTML = ""; // clear
 
   songs.forEach(song => {
-    const cardHTML = `
+
+    const card = `
       <div class="song-card">
-        <img src="${song.album.cover}" alt="Album Cover">
-        <div class="song-title">${song.title}</div>
-        <div><span class="label"></span> ${song.duration_seconds}s</div>
-        <div><span class="label"></span> ${song.rating}</div>
+
+        <img class="song-cover" src="${song.album.cover}" />
+
+        <div class="song-info">
+          <div class="song-title">${song.title}</div>
+          <div class="song-artist">${song.artists.join(", ")}</div>
+          <div class="song-duration">${song.duration_seconds} seconds</div>
+          <div class="song-duration">Rating: ${song.rating}</div>
+        </div>
+
       </div>
     `;
-    container.innerHTML += cardHTML;
-  });
-}
 
-renderSongs();
+    container.innerHTML += card;
+
+  });
 </script>
+
 </body>
 </html>
