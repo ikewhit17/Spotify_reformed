@@ -70,65 +70,7 @@
 
   <div class="title">Secret Playlist</div>
 
-  <div class="row">
-    <div class="song">
-      <img src="" width="40px" height="40px">
-      <div>Song Title 1</div>
-    </div>
-    <div style="margin-left:auto;">
-      <button type="button">Download</button>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="song">
-      <img src="" width="40px" height="40px">
-      <div>Song Title 2</div>
-    </div>
-    <div style="margin-left:auto;">
-      <button type="button">Download</button>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="song">
-      <img src="" width="40px" height="40px">
-      <div>Song Title 3</div>
-    </div>
-    <div style="margin-left:auto;">
-      <button type="button">Download</button>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="song">
-      <img src="" width="40px" height="40px">
-      <div>Song Title 4</div>
-    </div>
-    <div style="margin-left:auto;">
-      <button type="button">Download</button>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="song">
-      <img src="" width="40px" height="40px">
-      <div>Song Title 5</div>
-    </div>
-    <div style="margin-left:auto;">
-      <button type="button">Download</button>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="song">
-      <img src="" width="40px" height="40px">
-      <div>Song Title 6</div>
-    </div>
-    <div style="margin-left:auto;">
-      <button type="button">Download</button>
-    </div>
-  </div>
+ <div id="song-container"div></div>
 
 <div class="bottom" style = "background-color: lightgray;">
     <button type="button">Shuffle</button>
@@ -140,5 +82,27 @@
 </div>
 </div>
 </div>
+<script src="script.js"></script>
+
+<script>
+function renderSongs() {
+  const container = document.getElementById("song-container");
+  container.innerHTML = ""; // clear
+
+  songs.forEach(song => {
+    const cardHTML = `
+      <div class="song-card">
+        <img src="${song.album.cover}" alt="Album Cover">
+        <div class="song-title">${song.title}</div>
+        <div><span class="label"></span> ${song.duration_seconds}s</div>
+        <div><span class="label"></span> ${song.rating}</div>
+      </div>
+    `;
+    container.innerHTML += cardHTML;
+  });
+}
+
+renderSongs();
+</script>
 </body>
 </html>
