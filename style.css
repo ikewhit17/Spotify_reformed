@@ -31,3 +31,40 @@ button:hover {
   background: lightgray;
 }
 
+.song-card {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  font-family: Arial, sans-serif;
+}
+
+.song-cover {
+  width: 55px;
+  height: 55px;
+  border-radius: 6px;
+  object-fit: cover;
+  margin-right: 12px;
+}
+
+.song-info {
+  flex: 1;
+}
+
+.song-title {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.song-artist {
+  font-size: 10px;
+  color: #555;
+  margin-top: 3px;
+}
+
+.song-duration {
+  font-size: 10px;
+  color: #777;
+}
