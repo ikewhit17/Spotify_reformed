@@ -52,18 +52,18 @@
 }
 
 .song-title {
-  font-size: 16px;
+  font-size: 10px;
   font-weight: bold;
 }
 
 .song-artist {
-  font-size: 13px;
+  font-size: 10px;
   color: #555;
   margin-top: 3px;
 }
 
 .song-duration {
-  font-size: 12px;
+  font-size: 10px;
   color: #777;
 }
 
@@ -115,10 +115,7 @@ function renderSongs() {
       <div class="song-card">
         <img src="${song.album.cover}" alt="Album Cover">
         <div class="song-title">${song.title}</div>
-        <div class="artist">${song.artists.join(", ")}</div>
-        <div><span class="label"></span> ${song.album.name} (${song.album.year})</div>
         <div><span class="label"></span> ${song.duration_seconds}s</div>
-        <div><span class="label"></span> ${song.genre.join(", ")}</div>
         <div><span class="label"></span> ${song.rating}</div>
       </div>
     `;
