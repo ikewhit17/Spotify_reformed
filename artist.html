@@ -29,6 +29,44 @@
   display:flex;
   align-items:center;
 }
+.song-card {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  font-family: Arial, sans-serif;
+}
+
+.song-cover {
+  width: 55px;
+  height: 55px;
+  border-radius: 6px;
+  object-fit: cover;
+  margin-right: 12px;
+}
+
+.song-info {
+  flex: 1;
+}
+
+.song-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.song-artist {
+  font-size: 13px;
+  color: #555;
+  margin-top: 3px;
+}
+
+.song-duration {
+  font-size: 12px;
+  color: #777;
+}
+
 </style>
 </head>
 <body>
@@ -60,31 +98,36 @@
   <button style="padding:3px; margin-right:10px">See All</button>
   </form>
     </div><br>
-        <div class="row">
-    <div class="song">
-      <img src="" width="40px" height="40px">
-      <div style="padding:10px">Song Title 1</div>
-    </div>
-    <div style="margin-left:auto;"></div>
-  </div>
-  <div class="row">
-    <div class="song">
-      <img src="" width="40px" height="40px">
-      <div style="padding:10px">Song Title 2</div>
-    </div>
-    <div style="margin-left:auto;"></div>
-  </div>
-  <div class="row">
-    <div class="song">
-      <img src="" width="40px" height="40px">
-      <div style="padding:10px">Song Title 3</div>
-    </div>
-    <div style="margin-left:auto;"></div>
-  </div><br>
+        <div id="song-container"></div>
   <div style="text-align:center; border-top:1px solid grey"><p>Home &nbsp; &nbsp; Search &nbsp; &nbsp; Library &nbsp; &nbsp; Create</p></div>
     </div>
   </div>
 </div>
 <script src="script.js"></script>
+
+<script>
+function renderSongs() {
+  const container = document.getElementById("song-container");
+  container.innerHTML = ""; // clear
+
+  songs.forEach(song => {
+    const cardHTML = `
+      <div class="song-card">
+        <img src="${song.album.cover}" alt="Album Cover">
+        <div class="song-title">${song.title}</div>
+        <div class="artist">${song.artists.join(", ")}</div>
+        <div><span class="label"></span> ${song.album.name} (${song.album.year})</div>
+        <div><span class="label"></span> ${song.duration_seconds}s</div>
+        <div><span class="label"></span> ${song.genre.join(", ")}</div>
+        <div><span class="label"></span> ${song.rating}</div>
+      </div>
+    `;
+    container.innerHTML += cardHTML;
+  });
+}
+
+renderSongs();
+</script>
+
 </body>
 </html>

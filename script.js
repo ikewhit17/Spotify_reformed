@@ -17,7 +17,7 @@ const songs = [
       genre: ["alternative", "indie"],
       rating: 3/5
     },
-
+    
 {
 id: "B9T11PZD",
 title: "Black Sun Relay",
