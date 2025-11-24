@@ -72,15 +72,17 @@
 <script>
 function renderSongs() {
   const container = document.getElementById("song-container");
-  container.innerHTML = ""; // clear
+  container.innerHTML = "";
 
-  songs.forEach(song => {
+  const topFour = songs.slice(0, 4);  // first 5 items
+
+  topFour.forEach(song => {
     const cardHTML = `
       <div class="song-card">
         <img src="${song.album.cover}" alt="Album Cover">
         <div class="song-title">${song.title}</div>
-        <div><span class="label"></span> ${song.duration_seconds}s</div>
-        <div><span class="label"></span> ${song.rating}</div>
+        <div>${song.duration_seconds}s</div>
+        <div>${song.rating}</div>
       </div>
     `;
     container.innerHTML += cardHTML;
@@ -88,6 +90,7 @@ function renderSongs() {
 }
 
 renderSongs();
+
 </script>
 
 </body>
