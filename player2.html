@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUSIC PLAYER</title>
+
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .container div {
+            width: 100px;
+            padding: 10px;
+            text-align: center;
+            font-size: 10px;
+            background-color: lightgray;
+        }
+
+        .phone-mockup {
+            width: 350px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .screen {
+            background-color: lightgray;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="phone-mockup">
+        <div class="screen">
+
+            <!-- top section -->
+            <div style="text-align: center;">
+                <button>Song</button>
+                <button>Video</button>
+            </div>
+
+            <div class="container">
+                <div><img src="photos/Icons/Downarrow.png" width="30"></div>
+                <div><img src="photos/Icons/Speaker.png" width="30"></div>
+                <div style="width:100%; text-align:center;"><p>Secret Playlist</p></div>
+                <div><img src="" width="40"></div>
+            </div>
+
+            <!-- album img -->
+            <div style="text-align:center;">
+                <img id="album-cover" src="" width="250" height="250">
+            </div>
+
+            <!-- title + artist -->
+            <div style="margin-left:10px;">
+                <p id="song-title">Song Title</p>
+                <p id="song-artist">Artist Name</p>
+            </div>
+
+            <!-- icons -->
+            <div style="display:flex; gap:8px; margin-top:10px;">
+                <img src="photos/Icons/Rate.png" width="40">
+                <img src="photos/Icons/Save.png" width="40">
+                <img src="photos/Icons/Share.png" width="40">
+                <div style="width:100%; text-align:right;">
+                    <img src="photos/Icons/Checkmark.png" width="40">
+                </div>
+            </div>
+
+            <!-- progress bar -->
+            <div style="width:100%; margin-top:20px;">
+                <input type="range" style="width:100%;">
+                <span>0:00</span>
+                <span id="song-duration" style="float:right;">0:00</span>
+            </div>
+
+            <!-- controls -->
+            <div class="container" style="margin-top:20px;">
+                <div><img src="photos/Icons/Shuffle.png" width="40"></div>
+                <div><img src="photos/Icons/Play(back).png" width="20"></div>
+                <div><img src="photos/Icons/Play(pause).png" width="80"></div>
+                <div><img src="photos/Icons/Play(foward).jpg" width="20"></div>
+                <div><img src="photos/Icons/Play(repeat).png" width="30"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 🔥 ALL JAVASCRIPT BELOW IS 100% WORKING -->
+    <script>
+        // your entire songs list
+        const songs = [
+    { id: "1N87W35XAC3", title: "Can You Feel It?", artists: ["BoyWithUke"], album: { id: "10ZK54TN", name: "Burnout", year: 2024, cover: "cover1.jpg" }, duration_seconds: 184, explicit: false, genre: ["alternative", "indie"], rating: 3/5 },
+    { id: "B9T11PZD", title: "Black Sun Relay", artists: ["Iron Solvent"], album: { id: "ALB8834", name: "Furnace Dream", year: 2019, cover: "cover2.jpg" }, duration_seconds: 261, explicit: true, genre: ["metal", "hard rock"], rating: 5/5 },
+    { id: "C7U44LKM", title: "Midnight Satellite", artists: ["Rhea Linden"], album: { id: "ALB2291", name: "Orbit Lines", year: 2022, cover: "cover3.jpg" }, duration_seconds: 198, explicit: false, genre: ["pop", "synthpop"], rating: 3/5 },
+    { id: "D5R02HSQ", title: "Concrete Wildfire", artists: ["The Rotations"], album: { id: "ALB7710", name: "Street Geometry", year: 2020, cover: "cover4.jpg" }, duration_seconds: 175, explicit: true, genre: ["punk", "garage"], rating: 4/5 },
+    { id: "E3M87QPA", title: "Cypress Valley", artists: ["Hollow Pines"], album: { id: "ALB6657", name: "Dust Season", year: 2023, cover: "cover5.jpg" }, duration_seconds: 244, explicit: false, genre: ["folk", "americana"], rating: 4/5 },
+    { id: "F8S19WVV", title: "Vapor Cathedral", artists: ["Lucent Drift"], album: { id: "ALB9983", name: "Harmonics of Ash", year: 2024, cover: "cover6.jpg" }, duration_seconds: 227, explicit: false, genre: ["ambient", "electronic"], rating: 5/5 },
+    { id: "G2K33BRF", title: "Signal Lantern", artists: ["Harper Vale"], album: { id: "ALB4102", name: "Compass Blood", year: 2018, cover: "cover7.jpg" }, duration_seconds: 189, explicit: false, genre: ["country", "singer-songwriter"], rating: 3/5 },
+    { id: "H6V72MND", title: "Crimson Paradox", artists: ["Violet Theory"], album: { id: "ALB5599", name: "Refract", year: 2021, cover: "cover8.jpg" }, duration_seconds: 232, explicit: true, genre: ["alt-rock", "post-grunge"], rating: 4/5 },
+    { id: "J4C02TQL", title: "Bluewire District", artists: ["Metrophase"], album: { id: "ALB3327", name: "Static Lines", year: 2020, cover: "cover9.jpg" }, duration_seconds: 206, explicit: false, genre: ["edm", "house"], rating: 3/5 },
+    { id: "K9P58YRW", title: "Memory Orchard", artists: ["Echo Plains"], album: { id: "ALB7718", name: "Branch Logic", year: 2023, cover: "cover10.jpg" }, duration_seconds: 256, explicit: false, genre: ["lofi", "chillhop"], rating: 4/5 }
+];
+
+        // choose SONG #1
+        const song = songs[0];
+
+        // helper to format seconds → mm:ss
+        function formatTime(sec) {
+            const m = Math.floor(sec / 60);
+            const s = sec % 60;
+            return m + ":" + (s < 10 ? "0" + s : s);
+        }
+
+        // update HTML
+        document.getElementById("album-cover").src = song.album.cover;
+        document.getElementById("song-title").textContent = song.title;
+        document.getElementById("song-artist").textContent = song.artists.join(", ");
+        document.getElementById("song-duration").textContent = formatTime(song.duration_seconds);
+    </script>
+
+</body>
+</html>
