@@ -66,34 +66,31 @@
 <div class="bar" style = "font-size: 20px;">Top Songs</div>
 </div>
 
-   <div class="container" id="top-songs">
-   </div>
+  
+<div class="row" style="background-color: lightgray;">
+  <div>1</div>
+  <div><img src="Image" width="40" height="40"></div>
+  <div>Song Title <br>Artist</div>
+  <div style="margin-left:auto;">...</div>
+</div>
 
-<script>
-function renderTopSongs() {
-  const container = document.getElementById("top-songs");
-  container.innerHTML = "";
+<div class="row">
+  <div>2</div>
+  <div><img src="Image" width="40" height="40"></div>
+  <div>Song Title <br>Artist</div>
+  <div style="margin-left:auto;">...</div>
+</div>
 
-  songs.forEach((song, index) => {
-    const row = document.createElement("div");
-    row.className = "row";
-
-    row.innerHTML = `
-      <div>${index + 1}</div>
-      <div><img src="${song.album.cover}" width="40" height="40"></div>
-      <div>${song.title}<br>${song.artists.join(", ")}</div>
-      <div style="margin-left:auto;">...</div>
-    `;
-
-    container.appendChild(row);
-  });
-}
-
-renderTopSongs();
-</script>
+<div class="row">
+  <div>3</div>
+  <div><img src="Image" width="40" height="40"></div>
+  <div>Song Title <br>Artist</div>
+  <div style="margin-left:auto;">...</div>
+</div>
+</div>
  
 
-<!-- This is the bottom part of the Song options page when you slide up -->
+
   <div class="bottom">
     <div class = "song">
     <img src = "" alt = "" width="20px" height="20px">
