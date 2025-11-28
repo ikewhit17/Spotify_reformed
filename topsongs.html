@@ -26,9 +26,9 @@
 
 .bottom{
   background:lightgray;
-  padding:20px;
+  padding:5px;
   display:grid;
-  row-gap:15px;
+  row-gap:13px;
 }
 
 .song{display:flex; 
@@ -67,38 +67,45 @@
 </div>
 
   
-<div class="row" style="background-color: lightgray;">
-  <div>1</div>
-  <div><img src="Image" width="40" height="40"></div>
-  <div>Song Title <br>Artist</div>
-  <div style="margin-left:auto;">...</div>
-</div>
+<div id="song-container"div>
+<script src="script.js"></script>
 
-<div class="row">
-  <div>2</div>
-  <div><img src="Image" width="40" height="40"></div>
-  <div>Song Title <br>Artist</div>
-  <div style="margin-left:auto;">...</div>
-</div>
+<script>
+  const container = document.getElementById("song-container");
 
-<div class="row">
-  <div>3</div>
-  <div><img src="Image" width="40" height="40"></div>
-  <div>Song Title <br>Artist</div>
-  <div style="margin-left:auto;">...</div>
+songs.slice(0, 3).forEach(song => {
+  const card = `
+    <div class="song-card">
+      <img class="song-cover" src="${song.album.cover}" />
+      <div class="song-info">
+        <div class="song-title">${song.title}</div>
+        <div class="song-artist">${song.artists.join(", ")}</div>
+        <div class="song-duration">${song.duration_seconds} seconds</div>
+        <div class="song-duration">Rating: ${song.rating}</div>
+      </div>
+    </div>
+  `;
+  container.innerHTML += card;
+});
+</script>
 </div>
-</div>
- 
-
 
   <div class="bottom">
-    <div class = "song">
-    <img src = "" alt = "" width="20px" height="20px">
-    <div>
-      <button type="button">Song title</button>
+
+ <div class="song" id="first-static">
+  <img id="static-img" src="" width="20px" height="20px">
+  <div>
+    <button id="static-title" type="button">Song title</button>
+  </div>
     </div>
-    </div>
-    <br>
+
+    <script>
+      const first = songs[0];
+
+document.getElementById("static-img").src = first.album.cover;
+document.getElementById("static-title").textContent = first.title;
+    </script>
+ 
 
     <div class = "song">
          <!-- Makes images clickable, sends them to a specific webpage, link, etc. -->
@@ -169,7 +176,6 @@
 </div>
 </div>
 </div>
-<script src="script.js"></script>
 </body>
 <html>
 
