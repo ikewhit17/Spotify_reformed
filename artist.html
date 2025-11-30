@@ -29,18 +29,6 @@
   display:flex;
   align-items:center;
 }
-.song-cover {
-  width: 28px;
-  height: 28px;
-}
-.song-card {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  width: 100%;
-  background-color: #ffffff;
-  border-bottom: 1px solid #ddd;
-}
 </style>
 </head>
 <body>
@@ -48,17 +36,17 @@
 <div class="screen">
 <div class="container">
 <div class="artist">
-  <img src="photos/G4djKxNXQAARbZy.jpg" alt="Artist Image" width=100% height="240px">
+  <img src="photos/G4djKxNXQAARbZy.jpg" alt="Artist Image" width=300px height="228px">
   <h2 style="text-align:left">Post Malone</h2>
 </div>
 <div>
   <div>
-    <p style="display:inline; padding-left:5px; font-size:14px;">67M monthly listeners</p>
+    <p style="display:inline; padding-left:6px; font-size:14px;">67M monthly listeners</p>
       <div style="float:right; padding-right:10px;">
         <button style="padding:5px">
           Follow
         </button>
-      <button style="width:35px; height:35px; background-color:green; color:white; border:none; border-radius:100%;">&#9654</button>
+      <button style="width:32px; height:32px; background-color:green; color:white; border:none; border-radius:100%;">&#9654</button>
     </div>
   </div>
 </div>
@@ -96,7 +84,7 @@
         <img class="song-cover" src="${song.album.cover}" />
         <div class="song-info">
           <div class="song-title">${song.title} - ${song.artists.join(", ")}</div>
-          <div class="song-duration">${formatDuration(song.duration_seconds)}</div>
+          <div class="song-duration">${formatDuration(song.duration_seconds)} &nbsp;&nbsp;-&nbsp;&nbsp; Rating: ${song.rating}</div>
         </div>
       </div>
     `;
