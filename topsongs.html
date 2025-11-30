@@ -71,17 +71,20 @@
 <script src="script.js"></script>
 
 <script>
+  function formatDuration(seconds) {
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${mins}:${secs.toString().padStart(2, "0")}`;
+  }
   const container = document.getElementById("song-container");
 
-songs.slice(0, 3).forEach(song => {
+songs.slice(0, 4).forEach(song => {
   const card = `
     <div class="song-card">
       <img class="song-cover" src="${song.album.cover}" />
-      <div class="song-info">
-        <div class="song-title">${song.title}</div>
-        <div class="song-artist">${song.artists.join(", ")}</div>
-        <div class="song-duration">${song.duration_seconds} seconds</div>
-        <div class="song-duration">Rating: ${song.rating}</div>
+        <div class="song-info">
+          <div class="song-title">${song.title} - ${song.artists.join(", ")}</div>
+          <div class="song-duration">${formatDuration(song.duration_seconds)} &nbsp;&nbsp;-&nbsp;&nbsp; Rating: ${song.rating}</div>
       </div>
     </div>
   `;
@@ -93,9 +96,9 @@ songs.slice(0, 3).forEach(song => {
   <div class="bottom">
 
  <div class="song" id="first-static">
-  <img id="static-img" src="" width="20px" height="20px">
+  <img id="static-img" src="" width="30px" height="30px">
   <div>
-    <button id="static-title" type="button">Song title</button>
+    <button id="static-title">Song title</button>
   </div>
     </div>
 
@@ -110,7 +113,7 @@ document.getElementById("static-title").textContent = first.title;
     <div class = "song">
          <!-- Makes images clickable, sends them to a specific webpage, link, etc. -->
       <a href="your landing page url">
- <img src="your image url" width = "20px" height = "20px">
+ <img src="photos/icons/Share.png" width = "30px" height = "30px">
 </a>
 <div>
        <button type="button">Share</button>
@@ -120,7 +123,7 @@ document.getElementById("static-title").textContent = first.title;
       <div class = "song">
          <!-- Makes images clickable, sends them to a specific webpage, link, etc. -->
       <a href="your landing page url">
- <img src="your image url" width = "20px" height = "20px">
+ <img src="your image url" width = "30px" height = "30px">
 </a>
 <div>
        <button type="button">Add to liked Songs</button>
@@ -130,7 +133,7 @@ document.getElementById("static-title").textContent = first.title;
     <div class = "song">
          <!-- Makes images clickable, sends them to a specific webpage, link, etc. -->
       <a href="your landing page url">
- <img src="your image url" width = "20px" height = "20px">
+ <img src="your image url" width = "30px" height = "30px">
 </a>
 <div>
        <button type="button">Add to Playlist</button>
@@ -140,7 +143,7 @@ document.getElementById("static-title").textContent = first.title;
       <div class = "song">
          <!-- Makes images clickable, sends them to a specific webpage, link, etc. -->
       <a href="your landing page url">
- <img src="your image url" width = "20px" height = "20px">
+ <img src="your image url" width = "30px" height = "30px">
 </a>
 <div>
        <button type="button">Add to Queue</button>
@@ -151,7 +154,7 @@ document.getElementById("static-title").textContent = first.title;
       <div class = "song">
          <!-- Makes images clickable, sends them to a specific webpage, link, etc. -->
       <a href="your landing page url">
- <img src="your image url" width = "20px" height = "20px">
+ <img src="your image url" width = "30px" height = "30px">
 </a>
 <div>
        <button type="button">Play Next</button>
@@ -161,7 +164,7 @@ document.getElementById("static-title").textContent = first.title;
       <div class = "song">
          <!-- Makes images clickable, sends them to a specific webpage, link, etc. -->
       <a href="your landing page url">
- <img src="your image url" width = "20px" height = "20px">
+ <img src="your image url" width = "30px" height = "30px">
 </a>
 <div>
        <button type="button">Start a Jam </button>
