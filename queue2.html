@@ -73,9 +73,9 @@
  <div id="song-container"div></div>
 
 <div class="bottom" style = "background-color: lightgray;">
-    <button type="button">Shuffle</button>
-    <button type="button">Repeat</button>
-    <button type="button">Timer</button>
+    <button type="button" style="width:60px;">Shuffle</button>
+    <button type="button" style="width:60px; margin-left: 16px; margin-right: 16px;">Repeat</button>
+    <button type="button" style="width:60px;">Timer</button>
     
 </div>
 </div>
@@ -85,9 +85,15 @@
 <script src="script.js"></script>
 
 <script>
-  const container = document.getElementById("song-container");
+  function formatDuration(seconds) {
+  const mins = Math.floor(seconds / 60);
+  const secs = seconds % 60;
+  return `${mins}:${secs.toString().padStart(2, "0")}`;
+}
 
-  songs.forEach(song => {
+  const container = document.getElementById("song-container");
+const topSongs = songs.slice(0, 5);
+  topSongs.forEach(song => {
 
     const card = `
       <div class="song-card">
@@ -97,7 +103,7 @@
         <div class="song-info">
           <div class="song-title">${song.title}</div>
           <div class="song-artist">${song.artists.join(", ")}</div>
-          <div class="song-duration">${song.duration_seconds} seconds</div>
+          <div class="song-duration">${formatDuration(song.duration_seconds)}</div>
           <div class="song-duration">Rating: ${song.rating}</div>
         </div>
 
