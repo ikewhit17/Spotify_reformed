@@ -83,7 +83,10 @@ songs.slice(0, 4).forEach(song => {
     <div class="song-card">
       <img class="song-cover" src="${song.album.cover}" />
         <div class="song-info">
-          <div class="song-title">${song.title} - ${song.artists.join(", ")}</div>
+          <div class="song-title-line">
+  <span class="song-title">${song.title}</span>
+  <span class="song-artist"> - ${song.artists.join(", ")}</span>
+</div>
           <div class="song-duration">${formatDuration(song.duration_seconds)} &nbsp;&nbsp;-&nbsp;&nbsp; Rating: ${song.rating}</div>
       </div>
     </div>
