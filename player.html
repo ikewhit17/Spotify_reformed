@@ -1,170 +1,101 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MUSIC PLAYER</title>
-    <link rel="stylesheet" href="style.css">
-
-<style>
-.container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.container div {
-  
-  width: 100px;
-  margin: px;
-  padding: 10px;
-  text-align: center;  
-  font-size: 10px;
-  background-color: lightgray;
-}
-
-</style>
-
-</head> 
-
-
-<body>
-
-      <div id="container" class="container">
-    </div>
-
-    <div class="phone-mockup">
-    <div class="screen" style = "background-color: lightgray;">
-    <!-- Top Section (time, song/video toggle, playlist name, dropdown, speaker, more options) -->
-  
-  <div>
-        <div style="text-align: center;">
-        <button>Song</button>
-        <button>Video</button>
-    </div>
-
-<div class="container">
-<div style= "text-align:left;">
-      <a href="your landing page url">
-<img src = "photos/Icons/Downarrow.png" alt = "DownarrowIcon" width="30px" height="30px">
-</a>
-</div>
-<div style= "text-align:left" ; >
-            <a href="your landing page url">
-<img src = "photos/Icons/Speaker.png" alt = "SpeakerIcon" width="30px" height="30px">
-</a>
-  </div>
-<div style="width:100%; text-align:center;font-size:12px"> 
-  <p>Secret Playlist</p> </div>  
- <div style= "width:%; text-align: right;"> 
-            <a href="your landing page url">
-<img src = "" width="40px" height="40px">
-</a>
-  </div>
-</div>
-  
-    </div>
-  
-    <!--Middle section (album artwork, song title, artist name, review, save, share)-->
-    <div style = "text-align: center;">
-<img src = "photos/G4djKxNXQAARbZy.jpg" alt = "Albumcover" width="250" height="250px">
+ㄱth="250" height="250px">
 </p>
     </div>
 
-    <div style="background-color: lightgray 10px; text-align: left; margin-left:10px; ">
-        <p>Song Title</p>
-        <p>Artist Name</p>
-    </div>
-    <div style="display:flex; gap:8px; ;">
-  <div>
-      <a href="your landing page url">
- <img src="photos/Icons/Rate.png" alt = "RateIcon" width = "40px" height = "40px">
-</a>
-</div>
+        <div style="background-color: lightgray 10px; text-align: left; margin-left:10px; ">
+                <p>Song Title</p>
+                        <p>Artist Name</p>
+                            </div>
+                                <div style="display:flex; gap:8px; ;">
+                                  <div>
+                                        <a href="your landing page url">
+                                         <img src="photos/Icons/Rate.png" alt = "RateIcon" width = "40px" height = "40px">
+                                         </a>
+                                         </div>
 
-<!--- save, share, checkmark icons -->
-<div style="position:fixed; left:">
-      <a href="your landing page url">
- <img src="photos/Icons/Save.png" alt = "SaveIcon"width = "40px" height = "40px">
-</a>
-</div>
-<div style="text-align:left; margin-left:0%"> 
-      <a href="your landing page url">
- <img src="photos/Icons/Share.png" alt = "ShareIcon"width = "40px" height = "40px">
-</a>
-</div>
-<div style="width:100%; text-align:right;"> 
-      <a href="your landing page url">
- <img src="photos/Icons/Checkmark.png" alt = "CheckmarkIcon"width = "40px" height = "40px">
-</a>
-</div>
-    </div>
+                                         <!--- save, share, checkmark icons -->
+                                         <div style="position:fixed; left:">
+                                               <a href="your landing page url">
+                                                <img src="photos/Icons/Save.png" alt = "SaveIcon"width = "40px" height = "40px">
+                                                </a>
+                                                </div>
+                                                <div style="text-align:left; margin-left:0%"> 
+                                                      <a href="your landing page url">
+                                                       <img src="photos/Icons/Share.png" alt = "ShareIcon"width = "40px" height = "40px">
+                                                       </a>
+                                                       </div>
+                                                       <div style="width:100%; text-align:right;"> 
+                                                             <a href="your landing page url">
+                                                              <img src="photos/Icons/Checkmark.png" alt = "CheckmarkIcon"width = "40px" height = "40px">
+                                                              </a>
+                                                              </div>
+                                                                  </div>
 
-    <!--music progress slider -->
-<div style="width:100%;" >
-  <input type="range" style="width:100%;">
-  <div style>
-    <span>0:00</span>
-    <span style="float:right;">3:21</span>
-  </div>
-</div>
+                                                                      <!--music progress slider -->
+                                                                      <div style="width:100%;" >
+                                                                        <input type="range" style="width:100%;">
+                                                                          <div style>
+                                                                              <span>0:00</span>
+                                                                                  <span style="float:right;">3:21</span>
+                                                                                    </div>
+                                                                                    </div>
 
-        <!--bottom section (functions for music player)-->
-    <div class="container" style = "width: 100%; text-align: center;">
-      <div> 
-            <a href="your landing page url">
-<img src = "photos/Icons/Shuffle.png" alt = "ShuffleIcon" width="40px" height="40px">
-</a>
-  </div>
-        <div> 
-            <a href="your landing page url">
-<img src = "photos/Icons/Play(back).png" alt = "Play(back)Icon" width="20px" height="20px">
-</a>
-  </div>
-     <div> 
-            <a href="your landing page url">
-<img src = "photos/Icons/Play(pause).png" alt = "Play(Pause)Icon" width="80px" height="80px">
-</a>
-  </div>
-      <div> 
-            <a href="your landing page url">
-<img src = "photos/Icons/Play(foward).jpg" alt = "Play(foward)Icon" width="20px" height="20px">
-</a>
-</div>
-<div>
-   <a href="your landing page url">
-<img src = "photos/Icons/Play(repeat).png" alt = "Play(repeat)Icon" height = "30" width = "30">
-</a>
-</div>
-</div>
-
-
-        <div class="container">
-            <button style="text-align:left; margin-left:5%; margin-bottom: 40cm;">connect</button>
-            <button style="margin-left:55%; margin-bottom: 40cm;">queue</button>
-        </div>
-        </div>
-</div>
-</body>
-</div>
+                                                                                            <!--bottom section (functions for music player)-->
+                                                                                                <div class="container" style = "width: 100%; text-align: center;">
+                                                                                                      <div> 
+                                                                                                                  <a href="your landing page url">
+                                                                                                                  <img src = "photos/Icons/Shuffle.png" alt = "ShuffleIcon" width="40px" height="40px">
+                                                                                                                  </a>
+                                                                                                                    </div>
+                                                                                                                            <div> 
+                                                                                                                                        <a href="your landing page url">
+                                                                                                                                        <img src = "photos/Icons/Play(back).png" alt = "Play(back)Icon" width="20px" height="20px">
+                                                                                                                                        </a>
+                                                                                                                                          </div>
+                                                                                                                                               <div> 
+                                                                                                                                                           <a href="your landing page url">
+                                                                                                                                                           <img src = "photos/Icons/Play(pause).png" alt = "Play(Pause)Icon" width="80px" height="80px">
+                                                                                                                                                           </a>
+                                                                                                                                                             </div>
+                                                                                                                                                                   <div> 
+                                                                                                                                                                               <a href="your landing page url">
+                                                                                                                                                                               <img src = "photos/Icons/Play(foward).jpg" alt = "Play(foward)Icon" width="20px" height="20px">
+                                                                                                                                                                               </a>
+                                                                                                                                                                               </div>
+                                                                                                                                                                               <div>
+                                                                                                                                                                                  <a href="your landing page url">
+                                                                                                                                                                                  <img src = "photos/Icons/Play(repeat).png" alt = "Play(repeat)Icon" height = "30" width = "30">
+                                                                                                                                                                                  </a>
+                                                                                                                                                                                  </div>
+                                                                                                                                                                                  </div>
 
 
-</div>
+                                                                                                                                                                                          <div class="container">
+                                                                                                                                                                                                      <button style="text-align:left; margin-left:5%; margin-bottom: 40cm;">connect</button>
+                                                                                                                                                                                                                  <button style="margin-left:55%; margin-bottom: 40cm;">queue</button>
+                                                                                                                                                                                                                          </div>
+                                                                                                                                                                                                                                  </div>
+                                                                                                                                                                                                                                  </div>
+                                                                                                                                                                                                                                  </body>
+                                                                                                                                                                                                                                  </div>
 
-<script>
 
-</script>
+                                                                                                                                                                                                                                  </div>
 
-</body>
-</html>
+                                                                                                                                                                                                                                  <script>
+
+                                                                                                                                                                                                                                  </script>
+
+                                                                                                                                                                                                                                  </body>
+                                                                                                                                                                                                                                  </html>
 
 
-<!---For reference
+                                                                                                                                                                                                                                  <!---For reference
 
- <div>
-      <a href="your landing page url">
- <img src="your image url" alt = ""width = "40px" height = "40px">
-</a>
-</div> 
+                                                                                                                                                                                                                                   <div>
+                                                                                                                                                                                                                                         <a href="your landing page url">
+                                                                                                                                                                                                                                          <img src="your image url" alt = ""width = "40px" height = "40px">
+                                                                                                                                                                                                                                          </a>
+                                                                                                                                                                                                                                          </div> 
 
---->
+ㅏ                                                                                                                                                                                                                                         --->
