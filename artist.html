@@ -29,8 +29,6 @@
   display:flex;
   align-items:center;
 }
-
-
 </style>
 </head>
 <body>
@@ -38,17 +36,17 @@
 <div class="screen">
 <div class="container">
 <div class="artist">
-  <img src="photos/G4djKxNXQAARbZy.jpg" alt="Artist Image" width=100% height="240px">
+  <img src="photos/G4djKxNXQAARbZy.jpg" alt="Artist Image" width=300px height="228px">
   <h2 style="text-align:left">Post Malone</h2>
 </div>
 <div>
   <div>
-    <p style="display:inline; padding-left:5px; font-size:14px;">67M monthly listeners</p>
+    <p style="display:inline; padding-left:6px; font-size:14px;">67M monthly listeners</p>
       <div style="float:right; padding-right:10px;">
         <button style="padding:5px">
           Follow
         </button>
-      <button style="width:35px; height:35px; background-color:green; color:white; border:none; border-radius:100%;">&#9654</button>
+      <button style="width:32px; height:32px; background-color:green; color:white; border:none; border-radius:100%;">&#9654</button>
     </div>
   </div>
 </div>
@@ -57,11 +55,11 @@
     Music &nbsp; &nbsp; Clips &nbsp; &nbsp; Events &nbsp; &nbsp; Merch
   </p>
 </div>
-<div style="padding-left:5px">Popular Songs
+<div style="padding-left:5px;">Popular Songs
   <form action="topsongs.html" method="get" style="float:right;">
-  <button style="padding:3px; margin-right:10px">See All</button>
+  <button style="padding:3px; margin-right:10px; margin-bottom: 6px;">See All</button>
   </form>
-    </div><br>
+    </div>
         <div id="song-container"></div>
   <div style="text-align:center; border-top:1px solid grey"><p>Home &nbsp; &nbsp; Search &nbsp; &nbsp; Library &nbsp; &nbsp; Create</p></div>
     </div>
@@ -70,28 +68,33 @@
 <script src="script.js"></script>
 
 <script>
-function renderSongs() {
+  function formatDuration(seconds) {
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${mins}:${secs.toString().padStart(2, "0")}`;
+  }
+
   const container = document.getElementById("song-container");
-  container.innerHTML = "";
 
-  const topFour = songs.slice(0, 4);  // first 5 items
+  const topSongs = songs.slice(0, 4);
 
-  topFour.forEach(song => {
-    const cardHTML = `
+  topSongs.forEach(song => {
+    const card = `
       <div class="song-card">
-        <img src="${song.album.cover}" alt="Album Cover">
-        <div class="song-title">${song.title}</div>
-        <div>${song.duration_seconds}s</div>
-        <div>${song.rating}</div>
+        <img class="song-cover" src="${song.album.cover}" />
+        <div class="song-info">
+          <div class="song-title-line">
+  <span class="song-title">${song.title}</span>
+  <span class="song-artist"> - ${song.artists.join(", ")}</span>
+</div>
+          <div class="song-duration">${formatDuration(song.duration_seconds)} &nbsp;&nbsp;-&nbsp;&nbsp; Rating: ${song.rating}</div>
+        </div>
       </div>
     `;
-    container.innerHTML += cardHTML;
+    container.innerHTML += card;
   });
-}
-
-renderSongs();
-
 </script>
+
 
 </body>
 </html>

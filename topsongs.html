@@ -26,9 +26,9 @@
 
 .bottom{
   background:lightgray;
-  padding:20px;
+  padding:5px;
   display:grid;
-  row-gap:15px;
+  row-gap:13px;
 }
 
 .song{display:flex; 
@@ -66,47 +66,57 @@
 <div class="bar" style = "font-size: 20px;">Top Songs</div>
 </div>
 
-  <div class="container">
-    <div class="row" style = "background-color: lightgray;">
-      <div>1</div>
-      <div>
-        <img src = "Image" alt = "" width="40px" height="40px">
-      </div>
-      <div>Song Title <br>Artist</div>
-      <div style = "margin-left:auto;">...</div>
-    </div>
-    <div class="row">
-      <div>2</div>
-      <div>
-        <img src = "Image" alt = "" width="40px" height="40px">
-      </div>
-      <div>Song Title <br>Artist</div>
-      <div style = "margin-left:auto;">...</div>
-    </div>
-    <div class="row">
-      <div>3</div>
-      <div>
-        <img src = "Image" alt = "" width="40px" height="40px">
-      </div>
-      <div>Song Title <br>Artist</div>
-      <div style = "margin-left:auto;">...</div>
-    </div>
-  </div>      
+  
+<div id="song-container"div>
+<script src="script.js"></script>
 
-<!-- This is the bottom part of the Song options page when you slide up -->
+<script>
+  function formatDuration(seconds) {
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${mins}:${secs.toString().padStart(2, "0")}`;
+  }
+  const container = document.getElementById("song-container");
+
+songs.slice(0, 4).forEach(song => {
+  const card = `
+    <div class="song-card">
+      <img class="song-cover" src="${song.album.cover}" />
+        <div class="song-info">
+          <div class="song-title-line">
+  <span class="song-title">${song.title}</span>
+  <span class="song-artist"> - ${song.artists.join(", ")}</span>
+</div>
+          <div class="song-duration">${formatDuration(song.duration_seconds)} &nbsp;&nbsp;-&nbsp;&nbsp; Rating: ${song.rating}</div>
+      </div>
+    </div>
+  `;
+  container.innerHTML += card;
+});
+</script>
+</div>
+
   <div class="bottom">
-    <div class = "song">
-    <img src = "" alt = "" width="20px" height="20px">
-    <div>
-      <button type="button">Song title</button>
+
+ <div class="song" id="first-static">
+  <img id="static-img" src="" width="30px" height="30px">
+  <div>
+    <button id="static-title">Song title</button>
+  </div>
     </div>
-    </div>
-    <br>
+
+    <script>
+      const first = songs[0];
+
+document.getElementById("static-img").src = first.album.cover;
+document.getElementById("static-title").textContent = first.title;
+    </script>
+ 
 
     <div class = "song">
          <!-- Makes images clickable, sends them to a specific webpage, link, etc. -->
       <a href="your landing page url">
- <img src="your image url" width = "20px" height = "20px">
+ <img src="photos/icons/Share.png" width = "30px" height = "30px">
 </a>
 <div>
        <button type="button">Share</button>
@@ -116,7 +126,7 @@
       <div class = "song">
          <!-- Makes images clickable, sends them to a specific webpage, link, etc. -->
       <a href="your landing page url">
- <img src="your image url" width = "20px" height = "20px">
+ <img src="your image url" width = "30px" height = "30px">
 </a>
 <div>
        <button type="button">Add to liked Songs</button>
@@ -126,7 +136,7 @@
     <div class = "song">
          <!-- Makes images clickable, sends them to a specific webpage, link, etc. -->
       <a href="your landing page url">
- <img src="your image url" width = "20px" height = "20px">
+ <img src="your image url" width = "30px" height = "30px">
 </a>
 <div>
        <button type="button">Add to Playlist</button>
@@ -136,7 +146,7 @@
       <div class = "song">
          <!-- Makes images clickable, sends them to a specific webpage, link, etc. -->
       <a href="your landing page url">
- <img src="your image url" width = "20px" height = "20px">
+ <img src="your image url" width = "30px" height = "30px">
 </a>
 <div>
        <button type="button">Add to Queue</button>
@@ -147,7 +157,7 @@
       <div class = "song">
          <!-- Makes images clickable, sends them to a specific webpage, link, etc. -->
       <a href="your landing page url">
- <img src="your image url" width = "20px" height = "20px">
+ <img src="your image url" width = "30px" height = "30px">
 </a>
 <div>
        <button type="button">Play Next</button>
@@ -157,7 +167,7 @@
       <div class = "song">
          <!-- Makes images clickable, sends them to a specific webpage, link, etc. -->
       <a href="your landing page url">
- <img src="your image url" width = "20px" height = "20px">
+ <img src="your image url" width = "30px" height = "30px">
 </a>
 <div>
        <button type="button">Start a Jam </button>
@@ -172,7 +182,6 @@
 </div>
 </div>
 </div>
-<script src="script.js"></script>
 </body>
 <html>
 
