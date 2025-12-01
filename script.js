@@ -8,7 +8,7 @@ const songs = [
       duration_seconds: 158,
       explicit: false,
       genre: ["pop", "rap"],
-      rating: 5/5 }, 
+      rating: "5/5" }, 
 
     { id: "2",
       title: "Circles",
@@ -19,7 +19,7 @@ const songs = [
       duration_seconds: 215, 
       explicit: false,
       genre: ["pop", "alternative"], 
-      rating: 5/5 }, 
+      rating: "5/5" }, 
 
     { id: "3", 
       title: "I Had Some Help",
@@ -30,7 +30,7 @@ const songs = [
       duration_seconds: 188, 
       explicit: true, 
       genre: ["country pop"], 
-      rating: 4/5 },
+      rating: "4/5" },
 
     { id: "4", 
       title: "Wow.",
@@ -42,7 +42,7 @@ const songs = [
       duration_seconds: 152, 
       explicit: true, 
       genre: ["rap"], 
-      rating: 4/5 },
+      rating: "4/5" },
 
     { id: "5", 
       title: "rockstar",
@@ -54,7 +54,7 @@ const songs = [
       duration_seconds: 218, 
       explicit: true, 
       genre: ["rap", "trap"], 
-      rating: 5/5 },
+      rating: "5/5" },
 
     { id: "6", 
       title: "Congratulations",
@@ -66,7 +66,7 @@ const songs = [
       duration_seconds: 220, 
       explicit: true, 
       genre: ["rap", "trap"], 
-      rating: 5/5 },
+      rating: "5/5" },
 
     { id: "7",
       title: "Goodbyes",
@@ -78,7 +78,7 @@ const songs = [
       duration_seconds: 174,
       explicit: true,
       genre: ["rap"],
-      rating: 4/5 },
+      rating: "4/5" },
 
     { id: "8",
       title: "Chemical",
@@ -90,5 +90,5 @@ const songs = [
       duration_seconds: 210,
       explicit: false,
       genre: ["pop", "alternative"],
-      rating: 5/5 }
+      rating: "5/5" }
 ];
